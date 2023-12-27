@@ -9,7 +9,8 @@
     "migrate:down": "knex migrate:up",
     "migrate:rollback": "knex migrate:up",
     "migrate:rollbackall": "knex migrate:rollback --all",
-    "seed": "knex seed:run --knexfile ./knexfile.ts"
+    "seed": "knex seed:run --knexfile ./knexfile.ts",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
