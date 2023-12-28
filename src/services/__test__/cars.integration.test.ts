@@ -8,9 +8,9 @@ describe("GET Cars", () => {
         {
           id: 1,
           car_name: "BMW M5",
+          car_rentperday: "rent",
           car_categories: "small",
           car_size: "small",
-          car_rent: "rent",
           car_img: "car.jpg",
           created_by: {
             id: 1,
@@ -34,11 +34,8 @@ describe("GET Cars", () => {
     testCarRepo.getCars= jest
       .fn()
       .mockImplementation(() => Promise.resolve(expectedCarsResponse));
-
     const carService = new CarsService(testCarRepo);
-
     const carsData = await carService.getCars();
-
     expect(carsData).toEqual(carResponse);
   });
 });
